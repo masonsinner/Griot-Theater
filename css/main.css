@@ -1,0 +1,246 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 0.5fr 0.5fr 1fr 0.5fr; 
+    grid-template-rows: 4vh 29vh 49vh 18vh; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "nav nav nav nav"
+      "hero hero hero hero"
+      ". post post ."
+      "footer footer footer footer"; 
+}
+
+/* .container > div {
+    border: 1px solid black;
+} */
+
+.nav { 
+    grid-area: nav; 
+    background-color: black;
+    height: 4vh;
+    color: white;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-head {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-left: 100px;
+}
+
+.nav-head > p {
+    padding-left: 50px;
+    font-size: 45px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.nav-link {
+    height: 100%;
+    display: flex;
+    margin-right: 22%;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.nav-link a {
+    width: 6vw;
+    font-size: 23px;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+}
+
+.hero { 
+    grid-area: hero;
+    height: 29vh;
+    top: 0;
+    color: white;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/theater-image-background.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.hero-text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text > p {
+    font-size: 180px;
+}
+
+.post { 
+    grid-area: post; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* border: solid 1px black; */
+}
+
+.post-head {
+    margin-top: 5vh;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(142, 141, 141);
+}
+
+.post-head > h1 {
+    padding-left: 130px;
+}
+
+.post-card {
+    margin-top: 2vh;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vh;
+    border-bottom: 2px solid rgb(179,179,179);
+}
+
+.post-img {
+    width: 16vw;
+    height: 7vh;
+}
+
+.post-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.post-text {
+    text-align: left;
+    padding-right: 10vw;
+    padding-top: 1vh;
+    font-size: 1.3vw;
+    height: 10vh;
+    font-weight: 100;
+}
+
+.post-btn {
+    background-color: rgb(235,182,37);
+    width: 9vw;
+    height: 3vh;
+    border: 1px solid rgb(218, 168, 33);
+    color: white;
+    font-size: 30px;
+}
+
+.footer { 
+    grid-area: footer; 
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.map {
+    width: 38vw;
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.map > img {
+    height: 50%;
+    width: 60%;
+    margin-left: 10vw;
+    padding-right: 2vw;
+
+}
+
+.footer-link {
+    width: 62vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+.info > a {
+        text-decoration: none;
+        color: white;
+}
+
+.info {
+    height: 100%;
+    width: 15vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vh 0;
+    font-size: 1vw;
+}
+
+.shows {
+    height: 100%;
+    width: 15vw;
+    padding: 0 6vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vh 0;
+    font-size: 1vw;
+    list-style-type: none;
+    margin-left: 7vw;
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.social {
+    height: 100%;
+    width: 15vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vh 0;
+    margin-left: 6vw;
+    font-size: 1vw;
+    list-style-type: none;
+}
